@@ -1,0 +1,11 @@
+<div id="login-form">
+    <% if (!isLoggedIn) { %>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="Användarnamn" autocomplete="off">
+        <input type="password" name="password" placeholder="Lösenord">
+        <input type="submit" value="logga in">
+    </form>
+    <% } else { %>
+        <p> <a href="/signout">Logga ut</a> </p>
+    <% } %>
+</div>
